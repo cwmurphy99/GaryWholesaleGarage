@@ -3,26 +3,26 @@ using System.Collections.Generic;
 
 namespace Garage
 {
-    public class Tesla : Vehicle //Electric Car
+    public class Tesla : Vehicle, IElectricVehicle //Electric Car
     {
+        public double CurrentChargePercentage { get; set; }
         public double BatteryKwh { get; set; }
-
-        public void ChargeBattery()
-        {
-            //method definition omitted
-        }
         public override void Drive()
         {
-            MainColor = "Red";
             Console.WriteLine($"The {MainColor} Tesla blazes past you! Mmmmmmm!");
         }
-        public override void Turn()
+        public override void Turn(string direction)
         {
-            Console.WriteLine("The vehicle quietly makes a left turn.");
+            Console.WriteLine($"The vehicle quietly makes a {direction} turn.");
         }
         public override void Stop()
         {
             Console.WriteLine("The vehicle buzzes to a complete stop.");
+        }
+        public void ChargeBattery()
+        {
+            BatteryKwh = 62;
+            CurrentChargePercentage = 100;
         }
     }
 }

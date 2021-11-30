@@ -13,12 +13,11 @@ namespace Garage
         }
         public override void Drive()
         {
-            MainColor = "Silver";
             Console.WriteLine($"The {MainColor} Ram rumbles past! Rrruummmbbble!");
         }
-        public override void Turn()
+        public override void Turn(string direction)
         {
-            Console.WriteLine("The vehicle quckly lumbers around a right turn");
+            Console.WriteLine($"The vehicle quckly lumbers around a {direction} turn");
         }
         public override void Stop()
         {
