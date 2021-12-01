@@ -7,13 +7,17 @@ namespace Garage
     {
         static void Main(string[] args)
         {
-            Zero fxs = new Zero();
-            fxs.MainColor = "Midnight Blue";
-            fxs.Name = "Zero Hour";
+            Zero fxs = new Zero
+            {
+                MainColor = "Midnight Blue",
+                Name = "Zero Hour"
+            };
 
-            Tesla modelS = new Tesla();
-            modelS.MainColor = "Red";
-            modelS.Name = "Ziggy Stardust";
+            Tesla modelS = new Tesla
+            {
+                MainColor = "Red",
+                Name = "Ziggy Stardust"
+            };
 
             Cessna mx410 = new Cessna
             {
