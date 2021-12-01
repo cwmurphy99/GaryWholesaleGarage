@@ -29,7 +29,6 @@ namespace Garage
             modelS.Drive();
             modelS.Turn("left");
             modelS.Stop();
-            //modelS.ChargeBattery();
             Console.WriteLine("");
 
             mx410.Drive();
