@@ -3,13 +3,15 @@ using System.Collections.Generic;
 
 namespace Garage
 {
-    public class Ram : Vehicle //Gas powered truck
+    public class Ram : Vehicle, IGasVehicles //Gas powered truck
     {
         public double FuelCapacity { get; set; }
+        public double CurrentTankPercentage { get; set; }
 
         public void RefuelTank()
         {
-            //method definition omitted
+            FuelCapacity = 23;
+            CurrentTankPercentage = 100;
         }
         public override void Drive()
         {

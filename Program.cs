@@ -15,11 +15,19 @@ namespace Garage
             modelS.MainColor = "Red";
             modelS.Name = "Ziggy Stardust";
 
-            Cessna mx410 = new Cessna();
-            mx410.MainColor = "White";
+            Cessna mx410 = new Cessna
+            {
+                MainColor = "White",
+                Name = "Zippin Pippin",
+                CurrentTankPercentage = 50
+            };
 
-            Ram truck = new Ram();
-            truck.MainColor = "Silver";
+            Ram truck = new Ram
+            {
+                MainColor = "Silver",
+                Name = "Bob",
+                CurrentTankPercentage = 42
+            };
 
             fxs.Drive();
             fxs.Turn("right");
@@ -53,8 +61,24 @@ namespace Garage
                 ev.ChargeBattery();
                 Console.WriteLine($"Charging {ev.Name} Electric Vehicle.");
                 Console.WriteLine($"Percentage: {ev.CurrentChargePercentage}%");
-                Console.WriteLine($"Battery Useage: {ev.BatteryKwh}!");
+                Console.WriteLine($"Battery Useage: {ev.BatteryKwh} Kwh!");
                 Console.WriteLine("");
+            }
+
+            List<IGasVehicles> GasVehiclesList = new List<IGasVehicles>()
+            {
+                truck,
+                mx410
+            };
+
+            foreach (IGasVehicles gv in GasVehiclesList)
+            {
+                Console.WriteLine($"Checking Fuel for: {gv.Name}");
+                Console.WriteLine($"Current Tank Percentage: {gv.CurrentTankPercentage}");
+                gv.RefuelTank();
+                Console.WriteLine($"Tank has been refueld.  Current Percentage: {gv.CurrentTankPercentage}");
+                Console.WriteLine("");
+
             }
         }
     }
