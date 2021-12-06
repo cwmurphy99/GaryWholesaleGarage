@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Garage
+namespace Vehicles
 {
     public class Zero : Vehicle, IElectricVehicle //Electric Motorcycle
     {

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace Garage
+namespace Vehicles
 {
     public class Vehicle
     {

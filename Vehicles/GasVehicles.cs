@@ -1,6 +1,6 @@
 using System;
 
-namespace Garage
+namespace Vehicles
 {
     public interface IGasVehicles
     {
